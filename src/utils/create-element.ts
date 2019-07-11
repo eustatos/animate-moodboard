@@ -12,17 +12,9 @@ export function createElement(
   if (typeof src !== 'undefined') {
     const element: HTMLElement = document.createElement('img');
     element.setAttribute('src', src);
-    if (typeof elementConfig.style !== 'undefined') {
-      Object.keys(elementConfig.style).forEach(cssStyle => {
-        element.style[cssStyle] = elementConfig.style[cssStyle];
-      });
-    }
-    if (typeof elementConfig.attrs !== 'undefined') {
-      Object.keys(elementConfig.attrs).forEach(attrKey => {
-        element.setAttribute(attrKey, elementConfig.attrs[attrKey]);
-      });
-    }
     elementConfig.element = element;
+    applyStyle(elementConfig);
+    applyAttrs(elementConfig);
   }
   /**
    *
@@ -36,15 +28,34 @@ export function createElement(
       );
     }
   }
-  /**
-   * 
-   * @param elementConfig 
-   * @param defaultConfig 
-   */
   function mergeConfigs(elementConfig, defaultConfig) {
-  if (typeof defaultConfig !== 'undefined') {
-    elementConfig.style = { ...defaultConfig.style, ...elementConfig.style };
-    elementConfig.attrs = { ...defaultConfig.attrs, ...elementConfig.attrs };
+    if (typeof defaultConfig !== 'undefined') {
+      elementConfig.style = { ...defaultConfig.style, ...elementConfig.style };
+      elementConfig.attrs = { ...defaultConfig.attrs, ...elementConfig.attrs };
+    }
   }
+
+  function applyStyle(config: IElement) {
+    const { element, style } = config;
+    if (typeof style !== 'undefined') {
+      Object.keys(style).forEach(cssStyle => {
+        if (typeof element === 'undefined') {
+          throw new SyntaxError('must have style property')
+        }
+        element.style[cssStyle] = style[cssStyle];
+      });
+    }
+  }
+  function applyAttrs(config: IElement) {
+    const { element, attrs } = config;
+    if (typeof attrs !== 'undefined') {
+      Object.keys(attrs).forEach(attrKey => {
+        if (typeof element === 'undefined') {
+          throw new SyntaxError('must have element properties');
+        } else {
+          element.setAttribute(attrKey, attrs[attrKey]);
+        }
+      });
+    }
   }
 }
