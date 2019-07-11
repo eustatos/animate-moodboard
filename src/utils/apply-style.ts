@@ -7,7 +7,7 @@ export default function applyStyle(config: IElement) {
       if (typeof element === 'undefined') {
         throw new SyntaxError('must have style property');
       }
-      element.style[cssStyle] = style[cssStyle];
+      element.style.setProperty(cssStyle, style[cssStyle]);
     });
   }
 }
