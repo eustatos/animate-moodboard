@@ -14,7 +14,7 @@ before_script:
   - yarn install
 
 script:
-  - yarn build
+  - yarn bundle
   - yarn test
 
 after_script:
