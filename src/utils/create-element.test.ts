@@ -1,5 +1,5 @@
 import { IElement } from '../interfaces';
-import createElement from './create-element';
+import { createElement } from './create-element';
 
 describe('createElement', () => {
   it('should be defined', () => {
