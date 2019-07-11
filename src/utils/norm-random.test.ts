@@ -45,12 +45,4 @@ describe('normRandom', () => {
     createMockMath(1);
     expect(normRandom.zeroTwo()).toBe(2);
   });
-  it('return negative number', () => {
-    createMockMath(0.5);
-    expect(normRandom.plusMinus() <= 0).toBeTruthy();
-  });
-  it('return 1', () => {
-    createMockMath(1);
-    expect(normRandom.plusMinus()).toBe(1);
-  });
 });
