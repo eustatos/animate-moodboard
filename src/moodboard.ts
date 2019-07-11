@@ -1,12 +1,11 @@
 import { IConfig } from './interfaces';
+import { returnVoid } from './types';
 
 class Moodboard {
-  constructor(config: IConfig) {
-    this._addElements(config);
-  }
+  private _addElements: returnVoid;
 
-  private _addElements(config: IConfig): void {
-      //
+  constructor(config: IConfig) {
+    //
   }
 }
 

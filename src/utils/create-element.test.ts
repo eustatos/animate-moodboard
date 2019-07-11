@@ -31,5 +31,31 @@ describe('createElement', () => {
     it('thow exception if not have requirements param', () => {
       expect(createElement.bind(null, {})).toThrow();
     });
+
+    it('apply default style', () => {
+      const defaultConfig = {
+        style: {
+          width: '300px',
+        },
+      };
+      createElement(elementConfig, defaultConfig);
+      let width: string | null = null;
+      if (typeof elementConfig.element !== 'undefined') {
+        width = elementConfig.element.style.width;
+      }
+      expect(width).toBe('300px');
+    });
+
+    it('must apply attrs', () => {
+      elementConfig.attrs = {
+        onclick: 'someFunc()',
+      };
+      createElement(elementConfig);
+      let onclick: string | null = null;
+      if (elementConfig.element) {
+        onclick = elementConfig.element.getAttribute('onclick');
+      }
+      expect(onclick).toBe('someFunc()');
+    });
   });
 });
