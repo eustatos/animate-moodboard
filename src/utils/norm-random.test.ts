@@ -36,7 +36,7 @@ describe('normRandom', () => {
     });
   });
   describe('zeroTwo return valid number', () => {
-    it('return greter than 1', () => {
+    it('return greater than 1', () => {
       createMockMath(0.6);
       expect(normRandom.zeroTwo()).toBeGreaterThan(1);
     });
