@@ -1,10 +1,10 @@
 {
   "name": "animate-moodboard",
-  "description": "Create dynamic or static moodboard from images or other elements",
+  "description": "Create animate or static moodboard from images or other elements",
   "keywords": [
     "moodboard"
   ],
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
