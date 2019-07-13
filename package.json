@@ -1,5 +1,5 @@
 {
-  "name": "moodboard",
+  "name": "animate-moodboard",
   "description": "Create dynamic or static moodboard from images or other elements",
   "keywords": [
     "moodboard"
@@ -13,9 +13,11 @@
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "bundle": "rollup -c",
+    "bundle": "rollup -c --compact",
     "test": "jest --coverage",
-    "doc": "typedoc src"
+    "doc": "typedoc src",
+    "prepublishOnly": "npm run test",
+    "prepare": "npm run bundle"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
