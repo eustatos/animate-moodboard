@@ -1,7 +1,4 @@
-import IConfig from './config.interface';
-import IElement from './element.interface';
+import IInitHandlers from './init-handler.interface';
+import IMoveHandlers from './init-handler.interface';
 
-export {
-    IConfig,
-    IElement
-}
+export { IInitHandlers, IMoveHandlers };

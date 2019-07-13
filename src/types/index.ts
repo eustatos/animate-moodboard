@@ -1,7 +1,3 @@
-import returnNumber from './return-number.type';
-import returnVoid from './return-void.type';
+import handlerType from './handler.type';
 
-export {
-    returnVoid,
-    returnNumber
-}
+export { handlerType };
