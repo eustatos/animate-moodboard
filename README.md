@@ -5,3 +5,6 @@
 # Animate-moodboard
 
 ![moodboard](assets/moodboard.gif)
+
+
+Read more about usage [here](https://eustatos.github.io/animate-moodboard)
