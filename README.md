@@ -4,7 +4,6 @@
 
 # Animate-moodboard
 
-![moodboard](assets/moodboard.gif)
-
+![animate-moodboard](https://habrastorage.org/webt/gu/jq/6q/gujq6q8kv03c7imnjzy5vfknveu.gif)
 
 Read more about usage [here](https://eustatos.github.io/animate-moodboard)
