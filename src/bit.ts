@@ -33,7 +33,7 @@ class Bit {
   public setAttrs(attrs: any) {
     Object.keys(attrs).forEach((attrKey: string) => {
       try {
-        this.element[attrKey] = attrs[attrKey];
+        this.element.setAttribute(attrKey, attrs[attrKey]);
       } catch (err) {
         // @TODO: make error handler
       }

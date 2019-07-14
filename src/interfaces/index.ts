@@ -1,5 +1,4 @@
 import IBit from './bit.interface';
-import IInitHandlers from './init-handler.interface';
-import IMoveHandlers from './init-handler.interface';
+import IStrategy from './strategy.interface';
 
-export { IInitHandlers, IMoveHandlers, IBit };
+export { IStrategy, IBit };
