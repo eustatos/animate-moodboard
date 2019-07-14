@@ -3,7 +3,6 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/494fec33311fb6a0cfcc/test_coverage)](https://codeclimate.com/github/eustatos/custom-moodboard/test_coverage)
 
 # Animate-moodboard
-
-![animate-moodboard](https://habrastorage.org/webt/gu/jq/6q/gujq6q8kv03c7imnjzy5vfknveu.gif)
+![](https://habrastorage.org/webt/cl/nr/s1/clnrs1kummsswdv9agdxh899kpa.gif)
 
 Read more about usage [here](https://eustatos.github.io/animate-moodboard)
