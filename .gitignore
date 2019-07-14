@@ -2,3 +2,6 @@ node_modules
 coverage
 lib
 docs/api
+_site
+docs/_site
+*cache
